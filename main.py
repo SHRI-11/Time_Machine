@@ -5,6 +5,7 @@ from spotipy.oauth2 import SpotifyOAuth
 
 CLINT_ID = "YOUR SPOTIFY DEVELOPER CLINT ID"
 CLINT_SECRET = "YOUR SPOTIFY DEVELOPWE CLINT SECRET"
+USERNAME = "YOUR SPOTIFY USERNAME HERE"
 SCOPE = "playlist-modify-private"
 
 date = input("Enter date you wanna jump back to(yyyy-mm-dd): ")
@@ -57,7 +58,7 @@ for title in titles:
 #
 # print(billboard_top_100)
 
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=SCOPE, client_id=CLINT_ID, client_secret=CLINT_SECRET, cache_path="token.txt", redirect_uri="https://example.com", username="Shri"))
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=SCOPE, client_id=CLINT_ID, client_secret=CLINT_SECRET, cache_path="token.txt", redirect_uri="https://example.com", username=USERNAME))
 user_id = sp.current_user()["id"]
 
 song_links = []
